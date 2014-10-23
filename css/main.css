@@ -1,12 +1,17 @@
 body{
+	background-color: #FFF;
+}
+.carousel{
 	background-color: #000;
 }
 
 .maxfangx{
-	color: #FFF;
 	font-family: 'Rock Salt', cursive;
 }
-
+.maxfang{
+	color: #FFF;
+}
 .x{
 	color: #F00;
 }
+
