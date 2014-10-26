@@ -3,6 +3,12 @@
 }*/
 
 .main-display{
+  background: url('../img/marimba.jpg');
+  background-size: cover;
+  height: 600px;
+}
+
+/*.main-display{
   height: 70%;
 }
 
@@ -12,7 +18,7 @@
   position: fixed;
   background-size: 100% auto;
   width: 100%;
-  height: inherit; /*same height as jumbotron */
+  height: inherit; /*same height as jumbotron 
   top:0;
   left:0;
   z-index: -1;
@@ -23,7 +29,7 @@
   color: white;
   text-shadow: #444 0 1px 1px;
   background:transparent;
-}
+}*/
 
 
 .maxfangx{
