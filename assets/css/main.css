@@ -10,10 +10,17 @@ body{
 }
 
 .maxfangx{
-  padding-left: 9%;
-  padding-top: 4%;
+	font-family: 'Rock Salt', cursive;
+  padding-left: 7%;
+  margin-top: 0%;
+  font-size: 48px;
 }
-
+.maxfang{
+	color: #FFF;
+}
+.x{
+	color: #F00;
+}
 
 
 /*.main-display{
@@ -38,15 +45,3 @@ body{
   text-shadow: #444 0 1px 1px;
   background:transparent;
 }*/
-
-
-.maxfangx{
-	font-family: 'Rock Salt', cursive;
-}
-.maxfang{
-	color: #FFF;
-}
-.x{
-	color: #F00;
-}
-
