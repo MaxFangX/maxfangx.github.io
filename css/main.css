@@ -1,6 +1,6 @@
-/*body{
-	background-color: #FFF;
-}*/
+body{
+  background-color: #000;
+}
 
 .main-display{
   background: url('../img/marimba.jpg');
@@ -8,6 +8,8 @@
   background-repeat: no-repeat;
   height: 600px;
 }
+
+
 
 /*.main-display{
   height: 70%;
