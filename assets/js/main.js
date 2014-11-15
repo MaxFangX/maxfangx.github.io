@@ -1,13 +1,15 @@
+
+//Carousel buttons
 $('.test-button1').click(function(){
-	alert('this button fucking works');
 	$('.main-display').css("background", "url('assets/img/marimba_full.jpg')");
+	$('.main-display').css("background-size", "contain");
+	$('.main-display').css("background-repeat", "no-repeat");
 });
 $('.test-button2').click(function(){
 	$('.main-display').css("background", "url('assets/img/darkcoin_onyx.png')");
+	$('.main-display').css("background-size", "contain");
+	$('.main-display').css("background-repeat", "no-repeat");
 });
-$('document').click(function(){
-	alert('lol ok');
-})
 
 
 
