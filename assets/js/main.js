@@ -1,9 +1,9 @@
 $('.test-button1').click(function(){
 	alert('this button fucking works');
-	$('.main-display').style.background = url('../img/marimba_full.jpg');
+	$('.main-display').css("background", "url('assets/img/marimba_full.jpg')");
 });
 $('.test-button2').click(function(){
-	$('.main-display').style.background = url('../img/darkcoin_onyx.png');
+	$('.main-display').css("background", "url('assets/img/darkcoin_onyx.png')");
 });
 $('document').click(function(){
 	alert('lol ok');
