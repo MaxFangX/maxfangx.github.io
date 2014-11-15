@@ -11,6 +11,13 @@ $('.test-button2').click(function(){
 	$('.main-display').css("background-repeat", "no-repeat");
 });
 
+$('.test-button1').click(function(){
+	$('span.x').html("X.");
+});
+
+$('.test-button2').click(function(){
+	$('span.x').html("Bitcoiner.");
+});
 
 
 // var jumboHeight = $('.jumbotron').outerHeight();
