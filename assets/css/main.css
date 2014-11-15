@@ -4,7 +4,7 @@ body{
 }
 
 .main-display{
-  background: url('../img/marimba.jpg');
+  background: url('../img/marimba_full.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   height: 600px;
