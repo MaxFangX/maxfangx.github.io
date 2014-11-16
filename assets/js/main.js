@@ -19,6 +19,12 @@ $('.test-button2').click(function(){
 	$('span.x').html("Bitcoiner.");
 });
 
+$(document).ready(function(){
+	var slides = $('.slide');
+	for(var i = 0, slide; slide = slides[i]; i++){
+		slides[i].setAttribute('data-slide-id', i);
+	}
+})
 
 // var jumboHeight = $('.jumbotron').outerHeight();
 // function parallax(){
