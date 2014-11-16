@@ -2,14 +2,17 @@
 //Carousel buttons
 $('.test-button1').click(function(){
 	$('.main-display').css("background", "url('assets/img/marimba_full.jpg')");
-	$('.main-display').css("background-size", "contain");
-	$('.main-display').css("background-repeat", "no-repeat");
 });
 $('.test-button2').click(function(){
 	$('.main-display').css("background", "url('assets/img/darkcoin_onyx.png')");
+});
+
+//Update .main-display css when slide changes
+//All CSS for .main-display needs to go here
+$('.slide-changer').click(function(){
 	$('.main-display').css("background-size", "contain");
 	$('.main-display').css("background-repeat", "no-repeat");
-});
+})
 
 $('.test-button1').click(function(){
 	$('span.x').html("X.");
