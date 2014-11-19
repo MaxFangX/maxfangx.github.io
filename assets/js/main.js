@@ -1,10 +1,10 @@
 
 //Carousel buttons
 $('.test-button1').click(function(){
-	$('.main-display').css("background", "url('assets/img/marimba_full.jpg')");
+	$('.main-display').css("background", "url('http://placehold.it/1920x720&text=X.')");
 });
 $('.test-button2').click(function(){
-	$('.main-display').css("background", "url('assets/img/darkcoin_onyx.png')");
+	$('.main-display').css("background", "url('http://placehold.it/1920x720&text=Bitcoiner.')");
 });
 
 //Update .main-display css when slide changes

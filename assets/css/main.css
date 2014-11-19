@@ -4,7 +4,8 @@ body{
 }
 
 .main-display{
-  background: url('../img/marimba_full.jpg');
+  background: url('http://placehold.it/1920x720&text=Filler1');
+  /*background: url('../img/marimba_full.jpg');*/
   background-size: contain;
   background-repeat: no-repeat;
   height: 600px;
