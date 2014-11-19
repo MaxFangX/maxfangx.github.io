@@ -11,10 +11,14 @@ body{
   height: 600px;
 }
 
+h1.maxfangx{
+  display: inline-block;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
 .maxfangx{
 	font-family: 'Rock Salt', cursive;
-  padding-left: 7%;
-  margin-top: 0%;
   font-size: 48px;
 }
 .maxfang{
