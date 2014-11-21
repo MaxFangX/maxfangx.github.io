@@ -9,7 +9,7 @@ body{
   background-size: contain;
   background-repeat: no-repeat;
   height: 37vw;
-  position: absolute;
+  position: relative;
 }
 
 h1.maxfangx{
