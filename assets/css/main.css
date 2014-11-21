@@ -9,6 +9,7 @@ body{
   background-size: contain;
   background-repeat: no-repeat;
   height: 37vw;
+  position: absolute;
 }
 
 h1.maxfangx{
@@ -28,7 +29,10 @@ h1.maxfangx{
 	color: #F00;
 }
 
-
+.chevron-left-wrapper{
+  position: absolute;
+  top: 18vw; /*Positions icon in middle, should be half of .main-display height*/
+}
 /*.main-display{
   height: 70%;
 }
