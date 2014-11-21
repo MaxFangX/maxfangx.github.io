@@ -29,10 +29,18 @@ h1.maxfangx{
 	color: #F00;
 }
 
-.chevron-left-wrapper{
+.chevron{
   position: absolute;
   top: 18vw; /*Positions icon in middle, should be half of .main-display height*/
 }
+
+.chevron-left{
+  left: 0px;
+}
+.chevron-right{
+  right:0px;
+}
+
 /*.main-display{
   height: 70%;
 }
