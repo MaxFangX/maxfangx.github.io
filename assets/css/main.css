@@ -32,6 +32,7 @@ h1.maxfangx{
 .chevron{
   position: absolute;
   top: 18vw; /*Positions icon in middle, should be half of .main-display height*/
+  font-size: 42px; /*Changes favicon size*/
 }
 
 .chevron-left{
@@ -40,6 +41,11 @@ h1.maxfangx{
 .chevron-right{
   right:0px;
 }
+
+
+
+
+*/ */ */ */
 
 /*.main-display{
   height: 70%;
