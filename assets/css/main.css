@@ -29,6 +29,29 @@ h1.maxfangx{
 	color: #F00;
 }
 
+.slide-control{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 15%;
+}
+
+.slide-left{
+  left: 0px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0,0,0,.5) 0,
+    rgba(0,0,0,.0001) 100%);
+}
+
+.slide-right{
+  right: 0px;
+  background-image: linear-gradient(
+    to left,
+    rgba(0,0,0,.5) 0,
+    rgba(0,0,0,.0001) 100%);
+}
+
 .chevron{
   position: absolute;
   top: 18vw; /*Positions icon in middle, should be half of .main-display height*/
