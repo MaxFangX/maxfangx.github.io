@@ -1,31 +1,39 @@
-
+var slides = null;
 //Carousel buttons
 $('.test-button1').click(function(){
-	$('.main-display').css("background", "url('http://placehold.it/1920x720&text=X.')");
+	$('span.x').html("X.");
+	$('.main-display').css("background", 
+		$('#slide-1')[0].dataset.background);
 });
 $('.test-button2').click(function(){
-	$('.main-display').css("background", "url('http://placehold.it/1920x720&text=Bitcoiner.')");
+	$('span.x').html("Bitcoiner.");
+	$('.main-display').css("background", 
+		$('#slide-2')[0].dataset.background);
+});
+$('.test-button3').click(function(){
+	$('span.x').html("Foo bar.");
+	$('.main-display').css("background", 
+		$('#slide-3')[0].dataset.background);
 });
 
 //Update .main-display css when slide changes
-//All CSS for .main-display needs to go here
+//All CSS for .main-display background needs to be copied here
 $('.slide-changer').click(function(){
 	$('.main-display').css("background-size", "contain");
 	$('.main-display').css("background-repeat", "no-repeat");
 })
 
-$('.test-button1').click(function(){
-	$('span.x').html("X.");
-});
-
-$('.test-button2').click(function(){
-	$('span.x').html("Bitcoiner.");
-});
-
+//On page load
 $(document).ready(function(){
-	var slides = $('.slide');
+
+	//Set the id attributes dynamically
+	slides = $('.slide');
 	for(var i = 0, slide; slide = slides[i]; i++){
-		slides[i].setAttribute('data-slide-id', i);
+		//Following two lines are equivalent
+		//slides[i].setAttribute('data-slide-id', i);
+		//slides[i].dataset.slideId = i;
+		slides[i].setAttribute('id', "slide-"+(i+1)); //Start index 1
+		//alert(slides[i].dataset.slideId);
 	}
 })
 
