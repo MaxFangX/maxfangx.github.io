@@ -8,7 +8,7 @@ body{
   /*background: url('../img/marimba_full.jpg');*/
   background-size: contain;
   background-repeat: no-repeat;
-  height: 37vw;
+  height: 38vw;
   position: relative;
 }
 
@@ -54,7 +54,7 @@ h1.maxfangx{
 
 .chevron{
   position: absolute;
-  top: 18vw; /*Positions icon in middle, should be half of .main-display height*/
+  top: 17vw; /*Positions icon in middle, should be half of .main-display height*/
   font-size: 42px; /*Changes favicon size*/
 }
 
