@@ -1,16 +1,16 @@
 var slides = null;
 //Carousel buttons
-$('.test-button1').click(function(){
+$('.indicator-1').click(function(){
 	$('span.x').html("X.");
 	$('.main-display').css("background", 
 		$('#slide-1')[0].dataset.background);
 });
-$('.test-button2').click(function(){
+$('.indicator-2').click(function(){
 	$('span.x').html("Bitcoiner.");
 	$('.main-display').css("background", 
 		$('#slide-2')[0].dataset.background);
 });
-$('.test-button3').click(function(){
+$('.indicator-3').click(function(){
 	$('span.x').html("Foo bar.");
 	$('.main-display').css("background", 
 		$('#slide-3')[0].dataset.background);
