@@ -65,6 +65,13 @@ h1.maxfangx{
   right:0px;
 }
 
+.indicator-wrapper{
+  position: absolute;
+  bottom: 20px;
+  width: 60px;
+  left: 50%;
+  margin-left: -30px;
+}
 
 
 
