@@ -8,7 +8,7 @@ body{
   /*background: url('../img/marimba_full.jpg');*/
   background-size: contain;
   background-repeat: no-repeat;
-  height: 38vw;
+  height: 37vw;
   position: relative;
 }
 
@@ -76,7 +76,7 @@ h1.maxfangx{
   text-align: center;
 }
 
-.slide-changer:hover{
+.indicator-wrapper > span:hover{
   color: #FFF;
 }
 
