@@ -1,13 +1,13 @@
 $('.slide').click(function(){
 	$('span.x').html(this.dataset.word);
-	console.log(this.dataset.background);
+	//console.log(this.dataset.background);
 	$('.main-display').css("background", this.dataset.background);
 	var jprev = $('.current');
 	var jthis = $(this);
-	console.log(jprev);
-	console.log(jthis);
-	console.log(jprev.get(0));
-	console.log(jthis.get(0));
+	// console.log(jprev);
+	// console.log(jthis);
+	// console.log(jprev.get(0));
+	// console.log(jthis.get(0));
 	if(jprev[0] == jthis[0]){
 		//Do nothing
 	}
@@ -52,7 +52,7 @@ $('.slide-right').click(function(){
 });
 
 $('.slide-left').click(function(){
-		var jprev = $('.current');
+	var jprev = $('.current');
 	var jthis;
 	if(jprev[0] == $('.slide-1')[0]){
 		jthis = $('.slide-3');
@@ -79,5 +79,9 @@ $('.slide-left').click(function(){
 
 //On page load
 $(document).ready(function(){
+	var slides = $('.slide');
+	for (var i = 0; slide = slides[i]; i++){
+		slide.dataset.slide = i+1;
+	};
 });
 
