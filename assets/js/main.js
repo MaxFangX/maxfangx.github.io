@@ -1,17 +1,9 @@
 $('.slide').click(function(){
-	$('span.x').html(this.dataset.word);
-	//console.log(this.dataset.background);
-	$('.main-display').css("background", this.dataset.background);
 	var jprev = $('.current');
 	var jthis = $(this);
-	// console.log(jprev);
-	// console.log(jthis);
-	// console.log(jprev.get(0));
-	// console.log(jthis.get(0));
-	if(jprev[0] == jthis[0]){
-		//Do nothing
-	}
-	else{
+	$('span.x').html(this.dataset.word);
+	$('.main-display').css("background", jthis.data("background"));
+	if(!jprev.is(jthis)){
 		jprev.removeClass('current'); //Switch current class
 		jthis.addClass('current');
 		jprev.removeClass('fa-dot-circle-o'); //Switch icon
@@ -28,19 +20,17 @@ $('.slide').click(function(){
 $('.slide-right').click(function(){
 	var jprev = $('.current');
 	var jthis;
-	if(jprev[0] == $('.slide-1')[0]){
+	if(jprev.is($('.slide-1'))){
 		jthis = $('.slide-2');
 	}
-	else if(jprev[0] == $('.slide-2')[0]){
+	else if(jprev.is($('.slide-2'))){
 		jthis = $('.slide-3');
 	}
 	else{
 		jthis = $('.slide-1');
 	}
-	$('span.x').html(jthis[0].dataset.word);
-	// console.log(jthis[0].dataset.word)
-	// console.log(jthis[0].dataset.background);
-	$('.main-display').css("background", jthis[0].dataset.background);
+	$('span.x').text(jthis.data('word'));
+	$('.main-display').css("background", jthis.data('background'));
 	jprev.removeClass('current'); //Switch current class
 	jthis.addClass('current');
 	jprev.removeClass('fa-dot-circle-o'); //Switch icon
@@ -54,19 +44,17 @@ $('.slide-right').click(function(){
 $('.slide-left').click(function(){
 	var jprev = $('.current');
 	var jthis;
-	if(jprev[0] == $('.slide-1')[0]){
+	if(jprev.is($('.slide-1'))){
 		jthis = $('.slide-3');
 	}
-	else if(jprev[0] == $('.slide-2')[0]){
+	else if(jprev.is($('.slide-2'))){
 		jthis = $('.slide-1');
 	}
 	else{
 		jthis = $('.slide-2');
 	}
-	$('span.x').html(jthis[0].dataset.word);
-	// console.log(jthis[0].dataset.word)
-	// console.log(jthis[0].dataset.background);
-	$('.main-display').css("background", jthis[0].dataset.background);
+	$('span.x').text(jthis.data('word'));
+	$('.main-display').css("background", jthis.data('background'));
 	jprev.removeClass('current'); //Switch current class
 	jthis.addClass('current');
 	jprev.removeClass('fa-dot-circle-o'); //Switch icon
