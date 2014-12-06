@@ -1,20 +1,26 @@
+//HELPERS
+var changeSlide = function(jprev, jthis){
+	$('.main-display').css("background", jthis.data("background"));
+	jprev.removeClass('current'); //Switch current class
+	jthis.addClass('current');
+	jprev.removeClass('fa-dot-circle-o'); //Switch icon
+	jprev.addClass('fa-circle-o');
+	jthis.removeClass('fa-circle-o');
+	jthis.addClass('fa-dot-circle-o');
+	//Keeps main-display intact
+	$('.main-display').css("background-size", "contain");
+	$('.main-display').css("background-repeat", "no-repeat");
+};
+
+//LISTENERS
 $('.slide').click(function(){
 	var jprev = $('.current');
 	var jthis = $(this);
 	$('span.x').html(this.dataset.word);
-	$('.main-display').css("background", jthis.data("background"));
+	
 	if(!jprev.is(jthis)){
-		jprev.removeClass('current'); //Switch current class
-		jthis.addClass('current');
-		jprev.removeClass('fa-dot-circle-o'); //Switch icon
-		jprev.addClass('fa-circle-o');
-		jthis.removeClass('fa-circle-o');
-		jthis.addClass('fa-dot-circle-o');
+		changeSlide(jprev,jthis);
 	}
-	//Update .main-display css when slide changes
-	//Should be copied anywhere slide changes
-	$('.main-display').css("background-size", "contain");
-	$('.main-display').css("background-repeat", "no-repeat");
 });
 
 $('.slide-right').click(function(){
@@ -28,16 +34,7 @@ $('.slide-right').click(function(){
 		id++;
 		jthis = $('.slide-'+id);
 	}
-	$('span.x').text(jthis.data('word'));
-	$('.main-display').css("background", jthis.data('background'));
-	jprev.removeClass('current'); //Switch current class
-	jthis.addClass('current');
-	jprev.removeClass('fa-dot-circle-o'); //Switch icon
-	jprev.addClass('fa-circle-o');
-	jthis.removeClass('fa-circle-o');
-	jthis.addClass('fa-dot-circle-o');
-	$('.main-display').css("background-size", "contain");
-	$('.main-display').css("background-repeat", "no-repeat");
+	changeSlide(jprev, jthis);
 });
 
 $('.slide-left').click(function(){
@@ -53,17 +50,10 @@ $('.slide-left').click(function(){
 	}
 	$('span.x').text(jthis.data('word'));
 	$('.main-display').css("background", jthis.data('background'));
-	jprev.removeClass('current'); //Switch current class
-	jthis.addClass('current');
-	jprev.removeClass('fa-dot-circle-o'); //Switch icon
-	jprev.addClass('fa-circle-o');
-	jthis.removeClass('fa-circle-o');
-	jthis.addClass('fa-dot-circle-o');
-	$('.main-display').css("background-size", "contain");
-	$('.main-display').css("background-repeat", "no-repeat");
+	changeSlide(jprev, jthis);
 });
 
-//On page load
+//ON PAGE LOAD
 $(document).ready(function(){
 	$.each($('.slide'), function(i, obj){ 
 		$(obj).data('slide', i+1);
