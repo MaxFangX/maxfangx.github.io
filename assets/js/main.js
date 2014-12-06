@@ -20,14 +20,13 @@ $('.slide').click(function(){
 $('.slide-right').click(function(){
 	var jprev = $('.current');
 	var jthis;
-	if(jprev.is($('.slide-1'))){
-		jthis = $('.slide-2');
-	}
-	else if(jprev.is($('.slide-2'))){
-		jthis = $('.slide-3');
+	var id = jprev.data('slide');
+	if(id == $('.slide').length){
+		jthis = $('.slide-1');
 	}
 	else{
-		jthis = $('.slide-1');
+		id++;
+		jthis = $('.slide-'+id);
 	}
 	$('span.x').text(jthis.data('word'));
 	$('.main-display').css("background", jthis.data('background'));
@@ -44,14 +43,13 @@ $('.slide-right').click(function(){
 $('.slide-left').click(function(){
 	var jprev = $('.current');
 	var jthis;
-	if(jprev.is($('.slide-1'))){
-		jthis = $('.slide-3');
-	}
-	else if(jprev.is($('.slide-2'))){
-		jthis = $('.slide-1');
+	var id = jprev.data('slide');
+	if(id == 1){
+		jthis = $('.slide-'+$('.slide').length);
 	}
 	else{
-		jthis = $('.slide-2');
+		id--;
+		jthis = $('.slide-'+id);
 	}
 	$('span.x').text(jthis.data('word'));
 	$('.main-display').css("background", jthis.data('background'));
@@ -68,7 +66,6 @@ $('.slide-left').click(function(){
 //On page load
 $(document).ready(function(){
 	$.each($('.slide'), function(i, obj){ 
-		console.log($(obj).data());
 		$(obj).data('slide', i+1);
 	});
 });
