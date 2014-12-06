@@ -67,9 +67,9 @@ $('.slide-left').click(function(){
 
 //On page load
 $(document).ready(function(){
-	var slides = $('.slide');
-	for (var i = 0; slide = slides[i]; i++){
-		slide.dataset.slide = i+1;
-	};
+	$.each($('.slide'), function(i, obj){ 
+		console.log($(obj).data());
+		$(obj).data('slide', i+1);
+	});
 });
 
