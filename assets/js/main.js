@@ -1,5 +1,6 @@
 //HELPERS
 var changeSlide = function(jprev, jthis){
+	$('span.x').text(jthis.data('word'));
 	$('.main-display').css("background", jthis.data("background"));
 	jprev.removeClass('current'); //Switch current class
 	jthis.addClass('current');
@@ -16,8 +17,6 @@ var changeSlide = function(jprev, jthis){
 $('.slide').click(function(){
 	var jprev = $('.current');
 	var jthis = $(this);
-	$('span.x').html(this.dataset.word);
-	
 	if(!jprev.is(jthis)){
 		changeSlide(jprev,jthis);
 	}
