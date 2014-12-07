@@ -93,6 +93,18 @@ h1.maxfangx{
     rgba(0,0,0,.75) 0,
     rgba(0,0,0,.0001) 100%);
 }
+.panel-wrapper{
+  text-align: center;
+  margin: 10px;
+}
+
+.panel{
+  display: inline-block;
+  background: url('http://placehold.it/200x125');
+  width: 200px;
+  height: 125px;
+  
+}
 
 
 */ */ */ */
