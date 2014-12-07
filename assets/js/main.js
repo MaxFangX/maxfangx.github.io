@@ -54,8 +54,16 @@ $('.slide-left').click(function(){
 
 //ON PAGE LOAD
 $(document).ready(function(){
-	$.each($('.slide'), function(i, obj){ 
+	$.each($('.slide'), function(i, obj){
+		//TODO add slides 
 		$(obj).data('slide', i+1);
+		var newPanel = $("<div class='panel'></div>");
+		newPanel.addClass('panel-'+(i+1));
+		newPanel.data('panel', i+1);
+		newPanel.css('background', "url('http://placehold.it/201x125&text=" + "Panel"+(i+1)+"')");
+		newPanel.appendTo('.panel-wrapper');
+
+		// $('.panel-wrapper').append()
 	});
 });
 

@@ -95,39 +95,15 @@ h1.maxfangx{
 }
 .panel-wrapper{
   text-align: center;
-  margin: 10px;
+  margin: 5px;
 }
 
 .panel{
   display: inline-block;
-  background: url('http://placehold.it/200x125');
+  margin-left: 5px;
   width: 200px;
   height: 125px;
-  
 }
 
 
 */ */ */ */
-
-/*.main-display{
-  height: 70%;
-}
-
-
-.bg {
-  background: url('../img/marimba.jpg') no-repeat center 0px;
-  position: fixed;
-  background-size: 100% auto;
-  width: 100%;
-  height: inherit; /*same height as jumbotron 
-  top:0;
-  left:0;
-  z-index: -1;
-}
-
-.jumbotron {
-  height: inherit;
-  color: white;
-  text-shadow: #444 0 1px 1px;
-  background:transparent;
-}*/
