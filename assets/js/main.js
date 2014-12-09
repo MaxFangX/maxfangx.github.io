@@ -22,6 +22,17 @@ $('.slide').click(function(){
 	}
 });
 
+var listeners = function(){
+	$('.panel').click(function(){
+		var jprev = $('.current');
+		var i = $(this).data('panel');
+		var jthis = $('.slide-'+i);
+		if(!jprev.is(jthis)){
+			changeSlide(jprev, jthis);
+		}
+	});
+};
+
 $('.slide-right').click(function(){
 	var jprev = $('.current');
 	var jthis;
@@ -65,5 +76,7 @@ $(document).ready(function(){
 
 		// $('.panel-wrapper').append()
 	});
+
+	listeners();
 });
 
