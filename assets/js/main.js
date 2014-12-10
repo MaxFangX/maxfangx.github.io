@@ -67,6 +67,7 @@ $('.slide-left').click(function(){
 $(document).ready(function(){
 	$.each($('.slide'), function(i, obj){
 		//TODO add slides 
+		$(obj).addClass('slide-'+ (i+1));
 		$(obj).data('slide', i+1);
 		var newPanel = $("<div class='panel'></div>");
 		newPanel.addClass('panel-'+(i+1));
