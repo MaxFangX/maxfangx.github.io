@@ -72,7 +72,7 @@ $(document).ready(function(){
 		var newPanel = $("<div class='panel'></div>");
 		newPanel.addClass('panel-'+(i+1));
 		newPanel.data('panel', i+1);
-		newPanel.css('background', "url('http://placehold.it/201x125&text=" + "Panel"+(i+1)+"')");
+		newPanel.css('background', "url('http://placehold.it/201x125&text=" + $(obj).data('word') + "')");
 		newPanel.appendTo('.panel-wrapper');
 
 		// $('.panel-wrapper').append()
