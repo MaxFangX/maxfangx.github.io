@@ -9,8 +9,7 @@ var changeSlide = function(jprev, jthis){
 	jthis.removeClass('fa-circle-o');
 	jthis.addClass('fa-dot-circle-o');
 	//Keeps main-display intact
-	$('.main-display').css("background-size", "contain");
-	$('.main-display').css("background-repeat", "no-repeat");
+	$('.main-display').css("background-size", "cover");
 };
 
 //LISTENERS
