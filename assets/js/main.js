@@ -78,5 +78,28 @@ $(document).ready(function(){
 	});
 
 	listeners();
+
+	$('.test-button1').click(function(){
+		var addr = '1JoktQJhCzuCQkt3GnQ8Xddcq4mUgNyXEa';
+		//var addr = '17x23dNjXJLzGMev6R63uyRhMWP1VHawKc';
+		//var addr = window.location.hash.split('#').pop();
+		var url = 'https://api.chain.com/v1/bitcoin';
+		url += '/addresses/' + addr;
+		url += '?key=GUEST-TOKEN';
+		$.ajax({
+			url: url,
+			type: 'GET',
+			success: function(data) {
+				$('#balance').text(data.balance);
+				alert(data.balance);
+			},
+			error: function(req, msg, err) {
+				alert('this ran');
+				console.log(err);
+			}
+		});
+	});
+
+
 });
 
