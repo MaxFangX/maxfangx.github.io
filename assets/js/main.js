@@ -1,7 +1,11 @@
 //HELPERS
 var changeSlide = function(jprev, jthis){
-	$('span.x').text(jthis.data('word'));
-	$('.main-display').css("background", jthis.data("background"));
+	setTimeout(function(){
+		$('span.x').text(jthis.data('word'));
+		$('.main-display').css("background", jthis.data("background"));
+		$('.main-display').css("background-size", "cover");
+	}, 2000);
+	
 	jprev.removeClass('current'); //Switch current class
 	jthis.addClass('current');
 	jprev.removeClass('fa-dot-circle-o'); //Switch icon
@@ -9,7 +13,7 @@ var changeSlide = function(jprev, jthis){
 	jthis.removeClass('fa-circle-o');
 	jthis.addClass('fa-dot-circle-o');
 	//Keeps main-display intact
-	$('.main-display').css("background-size", "cover");
+	
 };
 
 //LISTENERS
