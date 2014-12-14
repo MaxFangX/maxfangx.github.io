@@ -4,7 +4,7 @@ body{
 }
 
 .main-display{
-  background: url('http://placehold.it/1600x640&text=X.');
+  /*background: url('http://placehold.it/1600x640&text=X.');*/
   /*background: url('../img/marimba_full.jpg');*/
   background-size: cover;
   height: 40vw;
@@ -26,6 +26,14 @@ h1.maxfangx{
 }
 .x{
 	color: #F00;
+}
+
+.background{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  z-index: -1;
 }
 
 .slide-control{
