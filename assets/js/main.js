@@ -1,10 +1,10 @@
 //HELPERS
 var changeSlide = function(jprev, jthis){
-	setTimeout(function(){
-		$('span.x').text(jthis.data('word'));
-		$('.main-display').css("background", jthis.data("background"));
-		$('.main-display').css("background-size", "cover");
-	}, 2000);
+	//setTimeout(function(){
+	$('span.x').text(jthis.data('word'));
+	$('.background').attr("src",jthis.data("background"));
+	//}, 2000);
+	
 	
 	jprev.removeClass('current'); //Switch current class
 	jthis.addClass('current');
@@ -61,8 +61,6 @@ $('.slide-left').click(function(){
 		id--;
 		jthis = $('.slide-'+id);
 	}
-	$('span.x').text(jthis.data('word'));
-	$('.main-display').css("background", jthis.data('background'));
 	changeSlide(jprev, jthis);
 });
 
