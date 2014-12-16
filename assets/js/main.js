@@ -1,9 +1,9 @@
 //HELPERS
 var changeSlide = function(jprev, jthis){
-	//setTimeout(function(){
-	$('span.x').text(jthis.data('word'));
-	$('.background').attr("src",jthis.data("background"));
-	//}, 2000);
+	setTimeout(function(){
+		$('span.x').text(jthis.data('word'));
+		$('.background').attr("src",jthis.data("background"));
+	}, 2000);
 	
 	
 	jprev.removeClass('current'); //Switch current class
