@@ -102,3 +102,7 @@ $('.test-button1').click(function(){
 		}
 	});
 });
+
+$('.test-button2').click(function(){
+	$('.front').css("display", "none");
+})
