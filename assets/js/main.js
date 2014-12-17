@@ -2,7 +2,8 @@
 var changeSlide = function(jprev, jthis){
 	setTimeout(function(){
 		$('span.x').text(jthis.data('word'));
-		$('.background').attr("src",jthis.data("background"));
+		$('.foreground').attr("src",jthis.data("background"));
+		//$('.background').attr("src",jthis.data("background"));
 	}, 2000);
 	
 	
