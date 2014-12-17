@@ -1,20 +1,21 @@
 //HELPERS
+var isAnimating = False;
 var changeSlide = function(jprev, jthis){
-	setTimeout(function(){
-		$('span.x').text(jthis.data('word'));
-		$('.foreground').attr("src",jthis.data("background"));
-		//$('.background').attr("src",jthis.data("background"));
-	}, 2000);
-	
-	
-	jprev.removeClass('current'); //Switch current class
-	jthis.addClass('current');
-	jprev.removeClass('fa-dot-circle-o'); //Switch icon
-	jprev.addClass('fa-circle-o');
-	jthis.removeClass('fa-circle-o');
-	jthis.addClass('fa-dot-circle-o');
-	//Keeps main-display intact
-	
+	if(!isAnimating){
+		isAnimating = true;
+		setTimeout(function(){
+			$('span.x').text(jthis.data('word'));
+			$('.foreground').attr("src",jthis.data("background"));
+			//$('.background').attr("src",jthis.data("background"));
+			isAnimating = false;
+		}, 2000);
+		jprev.removeClass('current'); //Switch current class
+		jthis.addClass('current');
+		jprev.removeClass('fa-dot-circle-o'); //Switch icon
+		jprev.addClass('fa-circle-o');
+		jthis.removeClass('fa-circle-o');
+		jthis.addClass('fa-dot-circle-o');
+		}
 };
 
 //LISTENERS
