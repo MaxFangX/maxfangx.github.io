@@ -9,15 +9,11 @@ var changeSlide = function(jprev, jthis){
 			opacity: 1
 		}, 1000, function(){
 			$('.background').attr("src",jthis.data("background"));
-		});
-		setTimeout(function(){
 			$('span.x').text(jthis.data('word'));
-			
-			//$('.background').attr("src",jthis.data("background"));
 			jprev.removeClass('current'); //Switch current class
 			jthis.addClass('current');
 			isAnimating = false;
-		}, 1050);
+		});
 		jprev.removeClass('fa-dot-circle-o'); //Switch icon
 		jprev.addClass('fa-circle-o');
 		jthis.removeClass('fa-circle-o');
