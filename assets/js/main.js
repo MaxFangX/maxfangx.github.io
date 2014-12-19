@@ -98,11 +98,11 @@ var customize = function(identifier){
  */
 	switch(identifier){
 		case 'Bitcoiner':
-			{opacity: 1}
+			//{'opacity': 1}
 			"CODE GOES HERE"
 			break;
 		default:
-			{'opacity': 1}
+			return 'TODO'
 	}
 }
 
