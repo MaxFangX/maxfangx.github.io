@@ -7,6 +7,7 @@ body{
   background-size: cover;
   height: 40vw;
   position: relative;
+  overflow: hidden;
 }
 
 h1.maxfangx{
