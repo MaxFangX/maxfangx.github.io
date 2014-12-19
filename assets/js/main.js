@@ -113,5 +113,6 @@ $('.test-button1').click(function(){
 });
 
 $('.test-button2').click(function(){
-	$('.foreground').css("display", "none");
+	$('.foreground').attr("src", "assets/img/sather_gate.jpg");
+	$('.foreground').css("opacity", 1);
 })
