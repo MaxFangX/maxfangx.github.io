@@ -87,6 +87,25 @@ $(document).ready(function(){
 	listeners();
 });
 
+//CUSTOMIZATION
+var customize = function(identifier){
+/* Given a string representation of each slide, return
+ * a plain object with jQuery selectors as keys and 
+ * plain objects of css key-value pairs as the values. 
+ * 
+ * For future note: consider adding another root key for 
+ * values that can and can't be animated. 
+ */
+	switch(identifier){
+		case 'Bitcoiner':
+			{opacity: 1}
+			"CODE GOES HERE"
+			break;
+		default:
+			{'opacity': 1}
+	}
+}
+
 $('.test-button1').click(function(){
 	var addr = '1JoktQJhCzuCQkt3GnQ8Xddcq4mUgNyXEa';
 	//var addr = '17x23dNjXJLzGMev6R63uyRhMWP1VHawKc';
