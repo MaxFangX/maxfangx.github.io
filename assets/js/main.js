@@ -89,10 +89,10 @@ $(document).ready(function(){
 
 //CUSTOMIZATION
 var customize = function(identifier){
-/* Given a string representation of each slide, return
+/* Given a string identifier of each slide, return
  * a plain object with jQuery selectors as keys and 
  * plain objects of css key-value pairs as the values. 
- * 
+ *  
  * For future note: consider adding another root key for 
  * values that can and can't be animated. 
  */
