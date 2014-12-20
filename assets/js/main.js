@@ -4,11 +4,11 @@ var changeSlide = function(jprev, jthis, customObject){
 	if(!isAnimating){
 		isAnimating = true;
 		if(typeof customObject == 'undefined'){
-			customObject = customization('default');
+			customObject = customization(jthis.data("word"));
 		}
 		$('.foreground').attr("src",jthis.data("background"));
 		$('.foreground').css("opacity", 0);
-		$('.foreground').animate(customObject, 1000, function(){
+		$('.foreground').animate(customObject['.foreground'], 1000, function(){
 			$('.background').attr("src",jthis.data("background"));
 			$('span.x').text(jthis.data('word'));
 			jprev.removeClass('current'); //Switch current class
@@ -99,13 +99,14 @@ var customization = function(identifier){
  */
  	var properties;
 	switch(identifier){
-		case 'Bitcoiner':
+		case 'Bitcoiner.':
 			//{'opacity': 1}
-			"CODE GOES HERE"
+			properties = {
+				'.foreground':{'opacity': 0}};
 			break;
 		case 'default':
 		default:
-			properties = {'opacity': 1};
+			properties = {'.foreground':{'opacity': 1}};
 	}
 	return properties
 }
