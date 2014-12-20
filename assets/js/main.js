@@ -1,13 +1,15 @@
 //HELPERS
 var isAnimating = false;
-var changeSlide = function(jprev, jthis){
+var changeSlide = function(jprev, jthis, customObject){
 	if(!isAnimating){
 		isAnimating = true;
+		if(typeof customObject == 'undefined'){
+			customObject = {};
+		}
+		customObject['opacity'] = 1; //Implement basic slide changes
 		$('.foreground').attr("src",jthis.data("background"));
 		$('.foreground').css("opacity", 0);
-		$('.foreground').animate({
-			opacity: 1
-		}, 1000, function(){
+		$('.foreground').animate(customObject, 1000, function(){
 			$('.background').attr("src",jthis.data("background"));
 			$('span.x').text(jthis.data('word'));
 			jprev.removeClass('current'); //Switch current class
