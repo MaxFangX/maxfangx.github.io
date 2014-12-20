@@ -4,9 +4,8 @@ var changeSlide = function(jprev, jthis, customObject){
 	if(!isAnimating){
 		isAnimating = true;
 		if(typeof customObject == 'undefined'){
-			customObject = {};
+			customObject = customization('default');
 		}
-		customObject['opacity'] = 1; //Implement basic slide changes
 		$('.foreground').attr("src",jthis.data("background"));
 		$('.foreground').css("opacity", 0);
 		$('.foreground').animate(customObject, 1000, function(){
@@ -90,7 +89,7 @@ $(document).ready(function(){
 });
 
 //CUSTOMIZATION
-var customize = function(identifier){
+var customization = function(identifier){
 /* Given a string identifier of each slide, return
  * a plain object with jQuery selectors as keys and 
  * plain objects of css key-value pairs as the values. 
@@ -98,14 +97,17 @@ var customize = function(identifier){
  * For future note: consider adding another root key for 
  * values that can and can't be animated. 
  */
+ 	var properties;
 	switch(identifier){
 		case 'Bitcoiner':
 			//{'opacity': 1}
 			"CODE GOES HERE"
 			break;
+		case 'default':
 		default:
-			return 'TODO'
+			properties = {'opacity': 1};
 	}
+	return properties
 }
 
 $('.test-button1').click(function(){
