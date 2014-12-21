@@ -1,20 +1,35 @@
 //HELPERS
 var isAnimating = false;
-var changeSlide = function(jprev, jthis, customObject){
+var changeSlide = function(jprev, jthis, customization){
 	if(!isAnimating){
 		isAnimating = true;
-		if(typeof customObject == 'undefined'){
-			customObject = customization(jthis.data("word"));
+		if(typeof customization == 'undefined'){
+			customization = getCustomization(jthis.data("word"));
 		}
 		$('.foreground').attr("src",jthis.data("background"));
 		$('.foreground').css("opacity", 0);
-		$('.foreground').animate(customObject['.foreground'], 1000, function(){
+		var animations = customization['animated'];
+		console.log(animations);
+		for(selector in animations){
+			console.log(animations[selector]);
+			$(selector).animate(animations[selector], 1000, 
+				function(){/*Animation complete*/})
+		}
+		// var simpleChanges = customizaton['static'];
+		// for(selector in simpleChanges){
+		// 	$(selector).css(simpleChanges)
+		// 	alert(selector);
+		// }
+		// $('.foreground').animate(customObject['.foreground'], 1000, function(){
+			
+		// });
+		setTimeout(function(){
 			$('.background').attr("src",jthis.data("background"));
 			$('span.x').text(jthis.data('word'));
 			jprev.removeClass('current'); //Switch current class
 			jthis.addClass('current');
 			isAnimating = false;
-		});
+		}, 1020);
 		jprev.removeClass('fa-dot-circle-o'); //Switch icon
 		jprev.addClass('fa-circle-o');
 		jthis.removeClass('fa-circle-o');
@@ -89,10 +104,10 @@ $(document).ready(function(){
 });
 
 //CUSTOMIZATION
-var customization = function(identifier){
+var getCustomization = function(identifier){
 /* Given a string identifier of each slide, return
  * a plain object with jQuery selectors as keys and 
- * plain objects of css key-value pairs as the values. 
+ * plain objects of animatable css pairs as the values. 
  *  
  * For future note: consider adding another root key for 
  * values that can and can't be animated. 
@@ -102,11 +117,24 @@ var customization = function(identifier){
 		case 'Bitcoiner.':
 			//{'opacity': 1}
 			properties = {
-				'.foreground':{'opacity': 0}};
+				'animated': {
+					'.foreground':{
+						'opacity': 1
+					}
+				},
+				'static':{}
+			};
 			break;
 		case 'default':
 		default:
-			properties = {'.foreground':{'opacity': 1}};
+			properties = {
+				'animated': {
+					'.foreground':{
+						'opacity': 1
+					}
+				},
+				'static':{}
+			};
 	}
 	return properties
 }
