@@ -116,9 +116,6 @@ var changeSlide = function(jprev, jthis, customization, animationTime){
 		//Compute final styles to change
 		//Overwrite defaults with current style (customization)
 		var computed = getDefault();
-		console.log('printing default');
-		console.log(computed);
-		console.log(computed['animated']['.foreground']);
 		for(selector in customization['animated']){
 			computed['animated'][selector] = customization['animated'][selector];
 		}
