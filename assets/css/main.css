@@ -1,6 +1,10 @@
 body{
-  background-color: #FFF;
+  background-color: #000;
   margin: 0px;
+}
+
+h1{
+  color: #FFF;
 }
 
 .main-display{
@@ -59,21 +63,36 @@ h1.maxfangx{
 
 .slide-left{
   left: 0px;
-  background-image: linear-gradient(
+/*  background-image: linear-gradient(
     to right,
-    rgba(0,0,0,.5) 0,
-    rgba(0,0,0,.0001) 100%);
+    rgba(255,255,255,.25) 0,
+    rgba(255,255,255,.0001) 100%);*/
 }
 
 .slide-right{
   right: 0px;
-  background-image: linear-gradient(
+/*  background-image: linear-gradient(
     to left,
-    rgba(0,0,0,.5) 0,
-    rgba(0,0,0,.0001) 100%);
+    rgba(255,255,255,.25) 0,
+    rgba(255,255,255,.0001) 100%);*/
+}
+
+.slide-left:hover{
+  background-image:linear-gradient(
+    to right,
+    rgba(255,255,255,.25) 0,
+    rgba(255,255,255,.0001) 100%);
+}
+
+.slide-right:hover{
+  background-image:linear-gradient(
+    to left,
+    rgba(255,255,255,.25) 0,
+    rgba(255,255,255,.0001) 100%);
 }
 
 .chevron{
+  color: #FFF;
   position: absolute;
   top: 17vw; /*Positions icon in middle, should be half of .main-display height*/
   font-size: 4vw; /*Changes favicon size*/
@@ -87,6 +106,7 @@ h1.maxfangx{
 }
 
 .indicator-wrapper{
+  color: #FFF;
   position: absolute;
   bottom: 20px;
   width: 200px;
@@ -97,22 +117,10 @@ h1.maxfangx{
 }
 
 .indicator-wrapper > span:hover{
-  color: #FFF;
+  color: #000;
 }
 
-.slide-left:hover{
-  background-image:linear-gradient(
-    to right,
-    rgba(0,0,0,.75) 0,
-    rgba(0,0,0,.0001) 100%);
-}
 
-.slide-right:hover{
-  background-image:linear-gradient(
-    to left,
-    rgba(0,0,0,.75) 0,
-    rgba(0,0,0,.0001) 100%);
-}
 .panel-wrapper{
   text-align: center;
   margin: 5px;
