@@ -1,19 +1,24 @@
 //HELPERS
 var isAnimating = false;
-var changeSlide = function(jprev, jthis, customization){
+var changeSlide = function(jprev, jthis, customization, animationTime){
 	if(!isAnimating){
 		isAnimating = true;
-		//Handle custom animation
+		//Default animation property values
 		if(typeof customization == 'undefined'){
 			customization = getCustomization(jthis.data("word"));
 		}
+		//Default animation time values
+		if(typeof animationTime == 'undefined'){
+			animationTime = 1000;
+		}
+
 		//Prerequisites for animation
 		$('.foreground').attr("src",jthis.data("background"));
 		$('.foreground').css("opacity", 0);
 		//Animate
 		var animations = customization['animated'];
 		for(selector in animations){
-			$(selector).animate(animations[selector], 1000, 
+			$(selector).animate(animations[selector], animationTime, 
 				function(){/*Animation complete*/});
 		}
 		// var simpleChanges = customizaton['static'];
@@ -31,7 +36,7 @@ var changeSlide = function(jprev, jthis, customization){
 			jprev.removeClass('current'); //Switch current class
 			jthis.addClass('current');
 			isAnimating = false;
-		}, 1020);
+		}, animationTime + 20); //20ms delay for code run time
 		jprev.removeClass('fa-dot-circle-o'); //Switch icon
 		jprev.addClass('fa-circle-o');
 		jthis.removeClass('fa-circle-o');
@@ -114,8 +119,14 @@ var getCustomization = function(identifier){
  * For future note: consider adding another root key for 
  * values that can and can't be animated. 
  */
+
+
  	var properties;
 	switch(identifier){
+		/* 
+		 * For every custom property value added in here,
+		 * it needs to be reset in the default option. 
+		 */
 		case 'Bitcoiner.':
 			//{'opacity': 1}
 			properties = {
