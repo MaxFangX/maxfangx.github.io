@@ -9,6 +9,11 @@
 //3) Modify computed to reflect customization for the new slide
 //4) Save styles from customization into lastStyle
 
+//TODO 3 
+//	Change changeSlide() to reflect that opacity
+//	will always start at 1 to remove redundancies
+//	in customization file
+
 //CUSTOMIZATION
 var getCustomization = function(identifier){
 /* Given a string identifier of each slide, return
