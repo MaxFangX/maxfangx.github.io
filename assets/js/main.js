@@ -3,6 +3,7 @@ var isAnimating = false;
 var changeSlide = function(jprev, jthis, customization, animationTime){
 	if(!isAnimating){
 		isAnimating = true;
+
 		//Default animation property values
 		if(typeof customization == 'undefined'){
 			customization = getCustomization(jthis.data("word"));
@@ -119,9 +120,6 @@ var getCustomization = function(identifier){
  * For future note: consider adding another root key for 
  * values that can and can't be animated. 
  */
-
-
- 	var properties;
 	switch(identifier){
 		/* 
 		 * For every custom property value added in here,
@@ -129,7 +127,7 @@ var getCustomization = function(identifier){
 		 */
 		case 'Bitcoiner.':
 			//{'opacity': 1}
-			properties = {
+			return {
 				'animated': {
 					'.foreground':{
 						'opacity': 1,
@@ -139,18 +137,18 @@ var getCustomization = function(identifier){
 				'static':{}
 			};
 			break;
-		case 'Percussionist.':
-			properties = {
+		case 'Marketer.':
+			return {
 				'animated': {
 					'.foreground':{
 						'opacity': 1,
-						//TODO
+						'margin-top': '-100px'
 					}
 				},
 				'static': {}
 			}
 		case 'Percussionist.':
-			properties = {
+			return {
 				'animated': {
 					'.foreground':{
 						'opacity': 1,
@@ -161,11 +159,11 @@ var getCustomization = function(identifier){
 			}
 		case 'default':
 		default:
-			properties = {
+			return {
 				'animated': {
 					'.foreground':{
 						'opacity': 1,
-						'margin': '0px'
+						'margin-top': '0%'
 					}
 				},
 				'static':{}
