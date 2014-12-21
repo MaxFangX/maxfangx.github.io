@@ -33,8 +33,11 @@ var getCustomization = function(identifier){
 					}
 				},
 				'static':{
-					'.x': {
+					'.maxfang': {
 						'color': '#60D4FF'
+					},
+					'.x': {
+						'color': '#FFF'
 					}
 				}
 			};
@@ -68,6 +71,9 @@ var getCustomization = function(identifier){
 					}
 				},
 				'static':{
+					'.maxfangx': {
+						'color': '#FFF'
+					},
 					'.x': {
 						'color': '#F00'
 					}
@@ -82,7 +88,6 @@ var getDefault = function(){
 
 //HELPERS
 var isAnimating = false;
-
 
 //lastStyles not used at the moment, implement with TODO 2
 //var lastStyles; 
