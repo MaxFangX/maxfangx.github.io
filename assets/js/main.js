@@ -16,25 +16,29 @@ var changeSlide = function(jprev, jthis, customization, animationTime){
 		//Prerequisites for animation
 		$('.foreground').attr("src",jthis.data("background"));
 		$('.foreground').css("opacity", 0);
+
 		//Animate
 		var animations = customization['animated'];
 		for(selector in animations){
 			$(selector).animate(animations[selector], animationTime, 
 				function(){/*Animation complete*/});
 		}
-		// var simpleChanges = customizaton['static'];
-		// for(selector in simpleChanges){
-		// 	$(selector).css(simpleChanges)
-		// 	alert(selector);
-		// }
-		// $('.foreground').animate(customObject['.foreground'], 1000, function(){
-			
-		// });
+
+
 		setTimeout(function(){
+			//Make other changes
+			var simpleChanges = customization['static'];
+			for(selector in simpleChanges){
+				$(selector).css(simpleChanges[selector]);
+			}
+			$('span.x').text(jthis.data('word'));
+
+			//Set background
 			$('.background').attr("src",jthis.data("background"));
 			$('.background').css(animations['.foreground']);
-			$('span.x').text(jthis.data('word'));
-			jprev.removeClass('current'); //Switch current class
+
+			//Switch current class
+			jprev.removeClass('current');
 			jthis.addClass('current');
 			isAnimating = false;
 		}, animationTime + 20); //20ms delay for code run time
@@ -134,9 +138,12 @@ var getCustomization = function(identifier){
 						'margin-top': '-115px'
 					}
 				},
-				'static':{}
+				'static':{
+					'.x': {
+						'color': '#60D4FF'
+					}
+				}
 			};
-			break;
 		case 'Marketer.':
 			return {
 				'animated': {
