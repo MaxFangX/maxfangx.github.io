@@ -139,6 +139,26 @@ var getCustomization = function(identifier){
 				'static':{}
 			};
 			break;
+		case 'Percussionist.':
+			properties = {
+				'animated': {
+					'.foreground':{
+						'opacity': 1,
+						//TODO
+					}
+				},
+				'static': {}
+			}
+		case 'Percussionist.':
+			properties = {
+				'animated': {
+					'.foreground':{
+						'opacity': 1,
+						//TODO
+					}
+				},
+				'static': {}
+			}
 		case 'default':
 		default:
 			properties = {
