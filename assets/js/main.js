@@ -152,7 +152,7 @@ var getCustomization = function(identifier){
 				'animated': {
 					'.foreground':{
 						'opacity': 1,
-						//TODO
+						'margin-top': '-10.7%'
 					}
 				},
 				'static': {}
