@@ -3,17 +3,18 @@ var isAnimating = false;
 var changeSlide = function(jprev, jthis, customization){
 	if(!isAnimating){
 		isAnimating = true;
+		//Handle custom animation
 		if(typeof customization == 'undefined'){
 			customization = getCustomization(jthis.data("word"));
 		}
+		//Prerequisites for animation
 		$('.foreground').attr("src",jthis.data("background"));
 		$('.foreground').css("opacity", 0);
+		//Animate
 		var animations = customization['animated'];
-		console.log(animations);
 		for(selector in animations){
-			console.log(animations[selector]);
 			$(selector).animate(animations[selector], 1000, 
-				function(){/*Animation complete*/})
+				function(){/*Animation complete*/});
 		}
 		// var simpleChanges = customizaton['static'];
 		// for(selector in simpleChanges){
@@ -25,6 +26,7 @@ var changeSlide = function(jprev, jthis, customization){
 		// });
 		setTimeout(function(){
 			$('.background').attr("src",jthis.data("background"));
+			$('.background').css(animations['.foreground']);
 			$('span.x').text(jthis.data('word'));
 			jprev.removeClass('current'); //Switch current class
 			jthis.addClass('current');
@@ -119,7 +121,8 @@ var getCustomization = function(identifier){
 			properties = {
 				'animated': {
 					'.foreground':{
-						'opacity': 1
+						'opacity': 1,
+						'margin-top': '-115px'
 					}
 				},
 				'static':{}
@@ -130,7 +133,8 @@ var getCustomization = function(identifier){
 			properties = {
 				'animated': {
 					'.foreground':{
-						'opacity': 1
+						'opacity': 1,
+						'margin': '0px'
 					}
 				},
 				'static':{}
@@ -163,4 +167,9 @@ $('.test-button1').click(function(){
 $('.test-button2').click(function(){
 	$('.foreground').attr("src", "assets/img/sather_gate.jpg");
 	$('.foreground').css("opacity", 1);
+})
+
+$('.test-button3').click(function(){
+	console.log("Test button 3 ran!");
+	$('.foreground').css('display', 'none');
 })
