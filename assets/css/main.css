@@ -27,6 +27,14 @@ h1.maxfangx{
 	color: #F00;
 }
 
+.foreground{
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  z-index: -1;
+  opacity: 0
+}
+
 .background{
   position: absolute;
   width: 100%;
@@ -34,12 +42,11 @@ h1.maxfangx{
   z-index: -2;
 }
 
-.foreground{
+.backdrop{
   position: absolute;
   width: 100%;
-  left: 0px;
-  z-index: -1;
-  opacity: 0
+  height: 100%;
+  z-index: -3;
 }
 
 .slide-control{
