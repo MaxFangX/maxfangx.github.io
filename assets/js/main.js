@@ -9,11 +9,6 @@
 //3) Modify computed to reflect customization for the new slide
 //4) Save styles from customization into lastStyle
 
-//TODO 3 
-//	Change changeSlide() to reflect that opacity
-//	will always start at 1 to remove redundancies
-//	in customization file
-
 //CUSTOMIZATION
 var getCustomization = function(identifier){
 /* Given a string identifier of each slide, return
@@ -33,7 +28,6 @@ var getCustomization = function(identifier){
 			return {
 				'animated': {
 					'.foreground':{
-						'opacity': 1,
 						'margin-top': '-115px'
 					}
 				},
@@ -50,7 +44,6 @@ var getCustomization = function(identifier){
 			return {
 				'animated': {
 					'.foreground':{
-						'opacity': 1,
 						'margin-top': '-100px'
 					}
 				},
@@ -60,7 +53,6 @@ var getCustomization = function(identifier){
 			return {
 				'animated': {
 					'.foreground':{
-						'opacity': 1,
 						'margin-top': '-10.7%'
 					}
 				},
@@ -71,7 +63,6 @@ var getCustomization = function(identifier){
 			return {
 				'animated': {
 					'.foreground':{
-						'opacity': 1,
 						'margin-top': '0%'
 					}
 				},
@@ -109,10 +100,6 @@ var changeSlide = function(jprev, jthis, customization, animationTime){
 			animationTime = 1000;
 		}
 
-		//Prerequisites for animation
-		$('.foreground').attr("src",jthis.data("background"));
-		$('.foreground').css("opacity", 0);
-
 		//Compute final styles to change
 		//Overwrite defaults with current style (customization)
 		var computed = getDefault();
@@ -123,6 +110,11 @@ var changeSlide = function(jprev, jthis, customization, animationTime){
 			computed['static'][selector] = customization['static'][selector];
 		}
 		//lastStyles = $.extend(true, {}, customization); TODO 2
+
+		//Prerequisites for animation
+		$('.foreground').attr("src",jthis.data("background"));
+		$('.foreground').css("opacity", 0);
+		computed['animated']['.foreground']['opacity'] = 1;
 
 		//Animate
 		var animations = computed['animated'];
