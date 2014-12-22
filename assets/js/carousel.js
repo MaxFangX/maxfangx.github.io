@@ -5,8 +5,11 @@
 //3) Modify computed to reflect customization for the new slide
 //4) Save styles from customization into lastStyle
 
+//TODO 2 Auto-change slide
+
 //HELPERS
 var isAnimating = false;
+var lastTime = new Date().getTime();
 
 //lastStyles not used at the moment, implement with TODO 2
 //var lastStyles; 
@@ -63,6 +66,7 @@ var changeSlide = function(jprev, jthis, customization, animationTime){
 			jprev.removeClass('current');
 			jthis.addClass('current');
 			isAnimating = false;
+			lastTime = new Date().getTime();
 		}, animationTime + 20); //20ms delay for code run time
 
 		//Switch icon
@@ -71,4 +75,35 @@ var changeSlide = function(jprev, jthis, customization, animationTime){
 		jthis.removeClass('fa-circle-o');
 		jthis.addClass('fa-dot-circle-o');
 	}
+};
+
+var date = new Date();
+
+var autoChangeSlide = function(gap){
+	if(typeof gap == 'undefined'){
+		gap = 5000;
+	}
+	var action = function(){
+		console.log('action ran');
+		var jprev = $('.current');
+		var jthis;
+		var id = jprev.data('slide');
+		if(id == $('.slide').length){
+			jthis = $('.slide-1');
+		}
+		else{
+			id++;
+			jthis = $('.slide-'+id);
+		}
+		changeSlide(jprev, jthis);
+	}
+	var run = function(){
+		console.log('run ran');
+		currentTime = new Date().getTime();
+		console.log('current time: '+ currentTime);
+		if(currentTime - lastTime > gap && !isAnimating){
+			action();
+		}
+	}
+	setInterval(run, gap);
 };
