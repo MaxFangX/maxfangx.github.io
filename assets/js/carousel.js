@@ -10,20 +10,25 @@
 //HELPERS
 var isAnimating = false;
 var lastTime = new Date().getTime();
+var animationTime = 1500;
+var setAnimationTime = function(t){
+	if(typeof t != 'number'){
+		alert('Invalid value');
+	}
+	else{
+		animationTime = t;
+	}
+}
 
 //lastStyles not used at the moment, implement with TODO 2
 //var lastStyles; 
-var changeSlide = function(jprev, jthis, customization, animationTime){
+var changeSlide = function(jprev, jthis, customization){
 	if(!isAnimating){
 		isAnimating = true;
 
 		//Default animation property values
 		if(typeof customization == 'undefined'){
 			customization = getCustomization(jthis.data("word"));
-		}
-		//Default animation time values
-		if(typeof animationTime == 'undefined'){
-			animationTime = 1000;
 		}
 
 		//Compute final styles to change
@@ -67,7 +72,7 @@ var changeSlide = function(jprev, jthis, customization, animationTime){
 			jthis.addClass('current');
 			isAnimating = false;
 			lastTime = new Date().getTime();
-		}, animationTime + 20); //20ms delay for code run time
+		}, animationTime + 10); //20ms delay for code run time
 
 		//Switch icon
 		jprev.removeClass('fa-dot-circle-o'); 
@@ -84,7 +89,6 @@ var autoChangeSlide = function(gap){
 		gap = 5000;
 	}
 	var action = function(){
-		console.log('action ran');
 		var jprev = $('.current');
 		var jthis;
 		var id = jprev.data('slide');
@@ -98,12 +102,10 @@ var autoChangeSlide = function(gap){
 		changeSlide(jprev, jthis);
 	}
 	var run = function(){
-		console.log('run ran');
 		currentTime = new Date().getTime();
-		console.log('current time: '+ currentTime);
 		if(currentTime - lastTime > gap && !isAnimating){
 			action();
 		}
 	}
-	setInterval(run, gap);
+	setInterval(run, gap + animationTime + 100);
 };
