@@ -1,8 +1,4 @@
-//TODO 1 add object as variable to keep track of the changes
-//make to the CSS. Can be done from within the animation
-//And the simple changes implementation.
-
-//TODO 2 change to only overwrite styles in lastStyle
+//TODO 1 change to only overwrite styles in lastStyle
 //1) Initialize computed as lastStyles
 //2) Rewrite all properties of computed with
 //   default values represented in lastStyles
