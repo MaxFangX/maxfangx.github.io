@@ -56,7 +56,7 @@ var getCustomization = function(identifier){
 					}
 				},
 				'static':{
-					'.maxfangx': {
+					'.maxfang': {
 						'color': '#FFF'
 					},
 					'.x': {
