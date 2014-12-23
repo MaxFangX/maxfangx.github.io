@@ -18,15 +18,16 @@ var getCustomization = function(identifier){
 				'animated': {
 					'.foreground':{
 						'margin-top': '-115px'
-					}
-				},
-				'static':{
+					},
 					'.maxfang': {
 						'color': '#60D4FF'
 					},
 					'.x': {
 						'color': '#FFF'
-					}
+					}					
+				},
+				'static':{
+
 				}
 			};
 		case 'Marketer.':
@@ -56,15 +57,16 @@ var getCustomization = function(identifier){
 				'animated': {
 					'.foreground':{
 						'margin-top': '0%'
-					}
-				},
-				'static':{
+					},
 					'.maxfang': {
 						'color': '#FFF'
 					},
 					'.x': {
 						'color': '#F00'
 					}
+				},
+				'static':{
+
 				}
 			};
 	}
