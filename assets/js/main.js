@@ -59,7 +59,6 @@ $(document).ready(function(){
 		newPanel.appendTo('.panel-wrapper');
 	});
 	listeners();
-	//setTimeout(autoChangeSlide(), 5000);
 	autoChangeSlide();
 });
 
