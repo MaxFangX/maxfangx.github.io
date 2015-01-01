@@ -24,11 +24,9 @@ var getCustomization = function(identifier){
 					},
 					'.x': {
 						'color': '#FFF'
-					}					
+					},			
 				},
-				'static':{
-
-				}
+				'static':{}
 			};
 		case 'Marketer.':
 			return {
@@ -38,7 +36,7 @@ var getCustomization = function(identifier){
 					},
 					'.maxfang': {
 						'color': '#000'
-					}
+					},
 				},
 				'static': {}
 			}
@@ -47,7 +45,7 @@ var getCustomization = function(identifier){
 				'animated': {
 					'.foreground':{
 						'margin-top': '-10.7%'
-					}
+					},
 				},
 				'static': {}
 			}
@@ -56,7 +54,7 @@ var getCustomization = function(identifier){
 				'animated': {
 					'.foreground': {
 						'margin-top': '-7.5%'
-					}
+					},
 				},
 				'static': {}
 			}
@@ -72,11 +70,9 @@ var getCustomization = function(identifier){
 					},
 					'.x': {
 						'color': '#F00'
-					}
+					},
 				},
-				'static':{
-
-				}
+				'static':{},
 			};
 	}
 }
