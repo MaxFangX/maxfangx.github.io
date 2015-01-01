@@ -94,7 +94,7 @@ h1.maxfangx{
 .chevron{
   color: #FFF;
   position: absolute;
-  top: 17vw; /*Positions icon in middle, should be half of .main-display height*/
+  top: 45%; /*Positions icon in middle, should be half of .main-display height*/
   font-size: 4vw; /*Changes favicon size*/
 }
 
