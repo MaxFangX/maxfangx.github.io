@@ -58,8 +58,22 @@ $(document).ready(function(){
 		newPanel.css('background', "url('http://placehold.it/201x125/000&text=" + $(obj).data('word') + "')");
 		newPanel.appendTo('.panel-wrapper');
 	});
+
+	//Initialize (apply) customization for first slide
+	var customization = getCustomization('X.');
+	var animatedChanges = customization['animated'];
+	for(selector in animatedChanges){
+		$(selector).css(animatedChanges[selector]);
+	}
+	var staticChanges = customization['static'];
+	for(selector in staticChanges){
+		$(selector).css(staticChanges[selector]);
+	}
+
 	listeners();
 	autoChangeSlide();
+
+
 });
 
 $('.test-button1').click(function(){
