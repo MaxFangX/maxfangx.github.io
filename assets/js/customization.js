@@ -51,6 +51,15 @@ var getCustomization = function(identifier){
 				},
 				'static': {}
 			}
+		case 'X.':
+			return {
+				'animated': {
+					'.foreground': {
+						'margin-top': '-7.5%'
+					}
+				},
+				'static': {}
+			}
 		case 'default':
 		default:
 			return {
