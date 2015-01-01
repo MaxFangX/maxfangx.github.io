@@ -34,7 +34,7 @@ var getCustomization = function(identifier){
 			return {
 				'animated': {
 					'.foreground':{
-						'margin-top': '-100px'
+						'margin-top': '-7.75%'
 					},
 					'.maxfang': {
 						'color': '#000'
