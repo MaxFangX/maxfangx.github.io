@@ -17,24 +17,26 @@ var getCustomization = function(identifier){
 			return {
 				'animated': {
 					'.foreground':{
-						'margin-top': '-115px'
-					}
-				},
-				'static':{
+						'margin-top': '-7.75%'
+					},
 					'.maxfang': {
 						'color': '#60D4FF'
 					},
 					'.x': {
 						'color': '#FFF'
-					}
-				}
+					},			
+				},
+				'static':{}
 			};
 		case 'Marketer.':
 			return {
 				'animated': {
 					'.foreground':{
-						'margin-top': '-100px'
-					}
+						'margin-top': '-7.75%'
+					},
+					'.maxfang': {
+						'color': '#000'
+					},
 				},
 				'static': {}
 			}
@@ -43,7 +45,16 @@ var getCustomization = function(identifier){
 				'animated': {
 					'.foreground':{
 						'margin-top': '-10.7%'
-					}
+					},
+				},
+				'static': {}
+			}
+		case 'X.':
+			return {
+				'animated': {
+					'.foreground': {
+						'margin-top': '-7.5%'
+					},
 				},
 				'static': {}
 			}
@@ -53,16 +64,15 @@ var getCustomization = function(identifier){
 				'animated': {
 					'.foreground':{
 						'margin-top': '0%'
-					}
-				},
-				'static':{
+					},
 					'.maxfang': {
 						'color': '#FFF'
 					},
 					'.x': {
 						'color': '#F00'
-					}
-				}
+					},
+				},
+				'static':{},
 			};
 	}
 }
