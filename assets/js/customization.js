@@ -53,6 +53,16 @@ var getCustomization = function(identifier){
 				},
 				'static': {}
 			}
+		/* 
+		 * Set background as well for the initial style to
+		 * fix the jump when transitioning from initial slide.
+		 * Code should mirror '.foreground' except with
+		 * '.background'
+		 */
+		case 'initial':
+			result['animated']['.background'] = {
+				'margin-top': '-7.5%'
+			}
 		case 'X.':
 			result['animated']['.foreground'] = {
 				'margin-top': '-7.5%'
