@@ -7,6 +7,10 @@ var getCustomization = function(identifier){
  * For future note: consider adding another root key for 
  * values that can and can't be animated. 
  */
+ 	var result = {
+ 		'animated': {},
+ 		'static': {}
+ 	}
 	switch(identifier){
 		/* 
 		 * For every custom property value added in here,
@@ -50,14 +54,10 @@ var getCustomization = function(identifier){
 				'static': {}
 			}
 		case 'X.':
-			return {
-				'animated': {
-					'.foreground': {
-						'margin-top': '-7.5%'
-					},
-				},
-				'static': {}
-			}
+			result['animated']['.foreground'] = {
+				'margin-top': '-7.5%'
+			};
+			return result;
 		case 'default':
 		default:
 			return {
