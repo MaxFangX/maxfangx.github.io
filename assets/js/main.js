@@ -60,7 +60,7 @@ $(document).ready(function(){
 	});
 
 	//Initialize (apply) customization for first slide
-	var customization = getCustomization('X.');
+	var customization = getCustomization('initial');
 	var animatedChanges = customization['animated'];
 	for(selector in animatedChanges){
 		$(selector).css(animatedChanges[selector]);
