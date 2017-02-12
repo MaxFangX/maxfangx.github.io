@@ -2,6 +2,11 @@ h1 {
     font-family: 'Seaweed Script', cursive;
     font-size: 100px;
 }
+@media(max-device-width: 480px){
+    h1 {
+        font-size: 85px;
+    }
+}
 
 h2, h3, h4, h5, h6, a, p {
     font-family: 'Droid Serif', serif;
@@ -28,7 +33,6 @@ subsection {
     position: relative;
     max-width: 700px;
     width: 100%;
-    margin-bottom: 100px;
 }
 
 .avatar {
