@@ -1,19 +1,39 @@
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Roboto', sans-serif;
+h1 {
+    font-family: 'Seaweed Script', cursive;
+    font-size: 100px;
 }
-header {
-	margin: 20px;
-	position: relative;
-	text-align: center;
+
+h2, h3, h4, h5, h6, a, p {
+    font-family: 'Droid Serif', serif;
+}
+
+p {
+    font-size: 16px;
+}
+
+section {
+  margin-top: 3rem;
+  border-top: 1px solid #000
+}
+
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
 }
 
 .avatar {
-	max-width: 25%;
-	border-style: solid;
-	border-width: 2px;
+    max-width: 20em;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.subtitle {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .content {
-	position: relative;
-	text-align: center;
+    position: relative;
+    margin: 20px
 }
