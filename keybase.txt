@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/maxfangx
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://maxfa.ng
+  * I am maxfangx (https://keybase.io/maxfangx) on keybase.
+  * I have a public key ASCOCmSjAmK56Wm-lgSDwpxDtAxpcI6FzAdgpYIav7jM5go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01200a5ccea12ac464e23aaa059fb6ed4df11ea6251d09ba3c5c2ac0fe25092c82cc0a",
+      "host": "keybase.io",
+      "kid": "01208e0a64a30262b9e969be960483c29c43b40c69708e85cc0760a5821abfb8cce60a",
+      "uid": "0ccda30d41aaa3d3865f503375c9dc19",
+      "username": "maxfangx"
+    },
+    "merkle_root": {
+      "ctime": 1529910082,
+      "hash": "7776cbd4a9dce767e78e5e600fa19e57fb170a226836df03dfc3ec17474b43d9a8723a322aae60a6005a1413f1cf4e77d19d94eba417167c1bd17ff61fd3d9ba",
+      "hash_meta": "1871f73267fd8e35a01a51e47e4204cf5edcef491602e55ed838a1dd2f456bb9",
+      "seqno": 3136683
+    },
+    "service": {
+      "entropy": "5HXenihuRr+7jqQBiqRzOpZj",
+      "hostname": "maxfa.ng",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.1.1"
+  },
+  "ctime": 1529910106,
+  "expire_in": 504576000,
+  "prev": "389963407cf54cf339d0cfa090195acb8b9295044f3d1870a62024447b4ddcb9",
+  "seqno": 45,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgjgpkowJiuelpvpYEg8KcQ7QMaXCOhcwHYKWCGr+4zOYKp3BheWxvYWTESpcCLcQgOJljQHz1TPM50M+gkBlay4uSlQRPPRhwpiAkRHtN3LnEIHvKhURcHIOLVyb3sDxmnNyITzfW/6Wmr7t03reR9ubkAgHCo3NpZ8RAWIDRPqSv+oJ6tbeNDm8rcr7rewVVYeB3OK463Eh94HfqTFvjfhM93v1bkkUT2jmJeu8n4PummoKIdbAFzU/RBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIB2Qg1rLYyZPMAKUzkjexTwy9AtOcGKUQ0KB4VQqkIPdo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/maxfangx
+
+==================================================================
